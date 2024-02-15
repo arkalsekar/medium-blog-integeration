@@ -1,0 +1,11 @@
+name: Refresh Feed
+on: [push]
+jobs:
+  refresh-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch API Data 📦
+        uses: JamesIves/fetch-api-data-action@v2
+        with:
+          endpoint: https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@arkalsekar
+          configuration: '{ "method": "GET"}'
