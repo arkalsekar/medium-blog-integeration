@@ -16,6 +16,7 @@ jobs:
         with:
           endpoint: https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@arkalsekar
           configuration: '{ "method": "GET"}'
+          save-name: data
 
       - name: Build and Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
